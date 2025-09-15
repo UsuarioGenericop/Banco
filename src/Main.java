@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -45,7 +44,13 @@ public class Main {
             System.out.print("Deseas retirar? (y/n): ");
             respuesta = scanner.nextLine();
         }
-
+        System.out.print("Ingresa tu PIN: ");
+        int PIN = scanner.nextInt();
+        while (PIN != cliente.PIN) {
+            System.out.println("PIN incorrecto");
+            System.out.print("Ingresa tu PIN: ");
+            PIN = scanner.nextInt();
+        }
         System.out.print("Ingresa la cantidad a retirar: ");
         double retiro = scanner.nextDouble();
         scanner.nextLine();
@@ -62,7 +67,7 @@ public class Main {
         }
 
 
-            scanner.close();
+        scanner.close();
 
-        }
     }
+}
