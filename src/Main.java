@@ -46,6 +46,7 @@ public class Main {
         }
         System.out.print("Ingresa tu PIN: ");
         int PIN = scanner.nextInt();
+        scanner.nextLine();
         while (PIN != cliente.PIN) {
             System.out.println("PIN incorrecto");
             System.out.print("Ingresa tu PIN: ");
@@ -66,8 +67,11 @@ public class Main {
             System.out.print("\u001B[31mFondos: \u001B[0m" + saldo);
         }
 
-
         scanner.close();
 
+        Empleado empleado1 = new Empleado();
+        empleado1.anosTrabajando = 9;
+        empleado1.calcularVacaciones();
+        empleado1.mostrarVacaciones();
     }
 }
