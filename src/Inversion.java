@@ -40,18 +40,18 @@ public class Inversion extends CuentaBancaria {
     }
 
     void cerrarCuenta() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner1 = new Scanner(System.in);
         System.out.println("\u001B[31mADVERTENCIA ESTA POR CERRAR SU CUENTA \u001B[0m");
         System.out.print("\u001B[31mESTA SEGURO? (Y/N) \u001B[0m");
-        String respuesta = scanner.nextLine();
-        if (respuesta.equalsIgnoreCase("y")) {
+        String respuestaCerrar = scanner1.nextLine();
+        if (respuestaCerrar.equalsIgnoreCase("y")) {
             System.out.print("\u001B[31mCONFIRME QUE DESEA BORRAR SU CUENTA (Y/N) \u001B[0m");
-            respuesta = scanner.nextLine();
-            if (respuesta.equalsIgnoreCase("y")) {
+            respuestaCerrar = scanner1.nextLine();
+            if (respuestaCerrar.equalsIgnoreCase("y")) {
                 System.out.println("Su cuenta ha sido borrada");
                 System.out.println("Ha retirado: " + saldo);
             }
         }
-        scanner.close();
+        scanner1.close();
     }
 }

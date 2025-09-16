@@ -1,10 +1,14 @@
-public class Empleado {
+public class Empleado extends Cliente {
     String nombre = "";
     int anosTrabajando = 0;
-    Boolean cajero = false;
-    Boolean supervisor = false;
-    Boolean recepcionista = false;
+    String puestoTrabajo;
     int vacaciones = 0;
+
+    Empleado(String nombreUsuario, int numeroUsuario, int anosTrabajando, String puestoTrabajo) {
+        super(nombreUsuario, numeroUsuario);
+        this.anosTrabajando = anosTrabajando;
+        this.puestoTrabajo = puestoTrabajo;
+    }
 
     void calcularVacaciones() {
 

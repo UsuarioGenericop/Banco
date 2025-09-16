@@ -5,7 +5,7 @@ public class Empresa {
     double porcentajeRetorno = 0;
 
     void calcularRetorno() {
-        double retorno = monto * (porcentajeRetorno * 100);
+        double retorno = monto * (porcentajeRetorno / 100);
         System.out.println(retorno);
     }
 }
