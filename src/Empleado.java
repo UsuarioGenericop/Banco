@@ -8,14 +8,18 @@ public class Empleado {
 
     void calcularVacaciones() {
 
-            if (anosTrabajando <= 1) {
-                vacaciones = 5;
-            } else if (anosTrabajando >= 9) {vacaciones = 20;
+        if (anosTrabajando <= 1) {
+            vacaciones = 5;
+        } else if (anosTrabajando >= 9) {
+            vacaciones = 20;
 
-            } else{
-                vacaciones = 5;
-                vacaciones = vacaciones + (2*(anosTrabajando-1)) ;
-            }
+        } else {
+            vacaciones = 5;
+            vacaciones = vacaciones + (2 * (anosTrabajando - 1));
+        }
     }
-    void mostrarVacaciones() {System.out.println(vacaciones);}
+
+    void mostrarVacaciones() {
+        System.out.println(vacaciones);
+    }
 }

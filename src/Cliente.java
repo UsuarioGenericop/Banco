@@ -4,10 +4,12 @@ public class Cliente {
     int PIN = 654321;
     boolean tieneFondos = false;
     double fondos = 0;
+
     void depositar() {
         System.out.print("Haz depositado ");
     }
-    void retirar(){
+
+    void retirar() {
         System.out.print("Haz retirado ");
     }
 }
