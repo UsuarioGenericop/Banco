@@ -67,10 +67,10 @@ public class Main {
 //
 //        scanner.close();
 //
-//        Empleado empleado1 = new Empleado();
-//        empleado1.anosTrabajando = 9;
-//        empleado1.calcularVacaciones();
-//        empleado1.mostrarVacaciones();
+        Empleado empleado1 = new Empleado();
+        empleado1.anosTrabajando = 9;
+        empleado1.calcularVacaciones();
+        empleado1.mostrarVacaciones();
         Ahorros cuenta1 = new Ahorros(22, "Andres", 10.0);
         cuenta1.detallesCuenta();
         cuenta1.mostrarTodo();
@@ -80,5 +80,14 @@ public class Main {
         cuenta1.calcularIntereses();
         cuenta1.retirar(3000.0);
         cuenta1.retirar(300.0);
+
+        Inversion cuenta2 = new Inversion(22, "Andres");
+        cuenta2.detallesCuenta();
+        cuenta2.depositar(20.0);
+        cuenta2.depositar(200000.0);
+        cuenta2.depositar(20.0);
+        cuenta2.retirar(300000.0);
+        cuenta2.retirar(3000.0);
+        cuenta2.cerrarCuenta();
     }
 }

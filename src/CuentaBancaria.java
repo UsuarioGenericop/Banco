@@ -13,7 +13,7 @@ public abstract class CuentaBancaria {
     }
 
     void detallesCuenta() {
-        System.out.println("Numero de cuentaCuenta: " + numeroCuenta);
+        System.out.println("Numero de Cuenta: " + numeroCuenta);
         System.out.println("Hola: " + nombreUsuario + "!");
     }
 
