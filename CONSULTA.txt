@@ -1,0 +1,99 @@
+a. Modelación de clases:
+La modelación de clases consiste en identificar y organizar las entidades principales de un sistema, definiendo sus atributos, métodos y relaciones con otras clases, lo que permite representar de forma abstracta la estructura y el comportamiento del software antes de implementarlo.
+
+b. Definición de variables de instancia y de clase:
+Las variables de instancia son atributos propios de cada objeto creado a partir de una clase, mientras que las variables de clase (estáticas) pertenecen a la clase en sí y son compartidas por todas las instancias, representándose en UML subrayadas para diferenciarlas.
+
+c. Comportamientos de objetos de la clase:
+Los comportamientos corresponden a las operaciones o métodos que los objetos pueden ejecutar, reflejando las acciones que son capaces de realizar, y en UML se describen con su nombre, parámetros, tipo de retorno y visibilidad (+, -, #).
+
+d. Diagrama de clases:
+El diagrama de clases es una representación gráfica de la estructura de un sistema, mostrando las clases en rectángulos divididos en secciones para el nombre, atributos y métodos, además de las relaciones entre ellas como herencia, asociación, agregación o composición.
+
+
+
+-------------------------
+Clase Usuario
+-------------------------
+- idUsuario : String
+- nombre : String
+-------------------------
++ solicitarPrestamo(libro : Libro) : boolean
++ devolverLibro(libro : Libro) : boolean
+-------------------------
+
+Clase Libro
+-------------------------
+- titulo : String
+- isbn : String
+- autor : String
+- cantidadTotalesLibros : int   <-- estático
+-------------------------
++ prestar(usuario : Usuario) : boolean
++ devolver() : void
++ getCantidadTotalesLibros() : int   <-- estático
+-------------------------
+
+Clase Prestamo
+-------------------------
+- fechaPrestamo : Date
+- fechaDevolucion : Date
+-------------------------
++ calcularMulta() : double
+-------------------------
+
+
+
+
+
+
+
+
+
++----------------------+
+|       Usuario        |
++----------------------+
+| - idUsuario : String |
+| - nombre : String    |
++----------------------+
+| + solicitarPrestamo(libro : Libro) : boolean |
+| + devolverLibro(libro : Libro) : boolean     |
++----------------------+
+
+             1..*          
+Usuario -----------------> Prestamo
+
++----------------------------+
+|         Prestamo           |
++----------------------------+
+| - fechaPrestamo : Date     |
+| - fechaDevolucion : Date   |
++----------------------------+
+| + calcularMulta() : double |
++----------------------------+
+
+             1
+Prestamo -----------------> Libro
+
++---------------------------------------+
+|                 Libro                 |
++---------------------------------------+
+| - titulo : String                     |
+| - isbn : String                       |
+| - autor : String                      |
+| - cantidadTotalesLibros : int (static)|
++---------------------------------------+
+| + prestar(usuario : Usuario) : boolean|
+| + devolver() : void                   |
+| + getCantidadTotalesLibros() : int (static) |
++---------------------------------------+
+
+
+
+
+
+
+
+
+
+
